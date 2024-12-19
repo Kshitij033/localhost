@@ -197,11 +197,11 @@ function showMovieDetails(movieId) {
                 if (currentContentType === 'movie') {
                     url = `https://flicky.host/embed/movie/?id=${data.id}`;
                 } else if (currentContentType === 'tv') {
-                    url = `https://flicky.host/embed/anime/?id=${data.id}/${currentSeason}/${currentEpisode}`;
+                    url = `https://flicky.host/embed/tv/?id=${data.id}/${currentSeason}/${currentEpisode}`;
                 }
                 fullscreenIframe.src = url;
                 fullscreenIframe.classList.add('show-iframe');
-                document.body.style.overflow = 'hidden'; // disable scrolling on body
+                document.body.style.overflow = 'hidden'; 
             };
 
             const watchlistKey = currentContentType === 'movie' ? 'movieWatchlist' : 'tvWatchlist';
